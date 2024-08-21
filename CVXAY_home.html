@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CVXray</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CVXRay.css') }}>
+</head>
+<body>
+    <form action="/" method="POST" enctype="multipart/form-data" id="cv_form">
+        <h2 class="form-title">CVXray</h2>
+        <table>
+            <tr>
+                <th><label for="fname">First Name</label></th>
+                <th><input type="text" id="fname" name="fname"></th>
+            </tr>
+            <tr>
+                <th><label for="lname">Last Name</label></th>
+                <th><input type="text" id="lname" name="lname"></th>
+            </tr>
+            <tr>
+                <th><label for="myfile">Upload your resume here:</label></th>
+                <th><input type="file" id="myfile" name="my_file"></th>
+            </tr>
+            <tr>
+                <th><label>Are you an international student?</label></th>
+                <th>
+                    <input type="radio" id="Yes" name="international_student" value="Yes">
+                    <label for="Yes">Yes</label>
+                    <input type="radio" id="No" name="international_student" value="No">
+                    <label for="No">No</label>
+                </th>
+            </tr>
+            <tr>
+                <th><label>Are you local?</label></th>
+                <th>
+                    <input type="radio" id="Yes" name="local" value="Yes">
+                    <label for="Yes">Yes</label>
+                    <input type="radio" id="No" name="local" value="No">
+                    <label for="No">No</label>
+                </th>
+            </tr>
+            <tr>
+                <th colspan="2" style="text-align:center;">
+                    <input type="submit" value="Submit">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
